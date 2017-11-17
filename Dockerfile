@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 
 COPY Gemfile /usr/src/app/
 RUN bundle install
+RUN gem install rake
 
 COPY . /usr/src/app
 
