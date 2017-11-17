@@ -5,13 +5,7 @@ WORKDIR /usr/src/app
 
 COPY Gemfile /usr/src/app/
 RUN bundle install
-RUN gem uninstall rake
-RUN rbenv global 2.1.1
-RUN rbenv rehash
-RUN rbenv uninstall rake
-RUN rbenv global 2.2.0
-RUN rbenv rehash
-RUN gem install rake
+RUN gem install rake -v '10.4.2'
 
 COPY . /usr/src/app
 
