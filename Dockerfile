@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 COPY Gemfile /usr/src/app/
 RUN bundle install
 RUN gem install rake -v '10.4.2'
+RUN gem install daemons -v '1.1.9'
 
 COPY . /usr/src/app
 
